@@ -35,23 +35,24 @@ git clone https://github.com/yiqia/Album.git
 
 2.修改config/conn.js文件里的mysql配置信息
 `
-var pool = mysql.createPool({
-    host: '127.0.0.1',//数据库地址
-    user:'root',//数据库账号
-    password:'root',//数据库密码
-    database:'album'//数据库名
-});
+
+var pool = mysql.createPool  
+    host: '127.0.0.1',//数据库地址  
+    user:'root',//数据库账号  
+    password:'root',//数据库密码  
+    database:'album'//数据库名  
+});  
 `
-3.修改config/qiniu.js文件里的七牛云配置信息
+3.修改config/qiniu.js文件里的七牛云配置信息  
 `
-qiniu_sdk.conf.ACCESS_KEY = "xxx"
-qiniu_sdk.conf.SECRET_KEY = "xxx"  
-qiniu_sdk.conf.url="xxxx"  //七牛云绑定域名
-// 要上传的空间名
-const bucket = "xxxx"
+qiniu_sdk.conf.ACCESS_KEY = "xxx"    
+qiniu_sdk.conf.SECRET_KEY = "xxx"    
+qiniu_sdk.conf.url="xxxx"  //七牛云绑定域名  
+// 要上传的空间名  
+const bucket = "xxxx"  
 `
 
-4.使用命令或者PM2管理器运行sever文件夹下的main.js
+4.使用命令或者PM2管理器运行sever文件夹下的main.js  
 `
 node main.js
 `
@@ -67,12 +68,14 @@ npm install
 如果导入失败，尝试一下用工具连接数据库，使用工具导入。
 
 7.修改前端接口请求地址，改成自己服务器的接口地址，/App.vue
-要注意小程序必须要使用https，node.js运行起来是以端口号的形式访问，所以需要用反向代理，把ip指向域名。
+要注意小程序必须要使用https，node.js运行起来是以端口号的形式访问，所以需要用反向代理，把ip指向域名。  
 `
+  
 globalData: {
 			//url: 'http://192.168.1.12:10001/'
 			url: 'https://ablum.q05.cc/'
 		}
+  
 `
 
 8.使用HBuilder X 发布到微信小程序即可
