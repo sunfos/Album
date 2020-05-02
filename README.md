@@ -43,7 +43,8 @@ var pool = mysql.createPool
     database:'album'//数据库名  
 });  
 `
-3.修改config/qiniu.js文件里的七牛云配置信息  
+  
+3.修改config/qiniu.js文件里的七牛云配置信息    
 `
 qiniu_sdk.conf.ACCESS_KEY = "xxx"    
 qiniu_sdk.conf.SECRET_KEY = "xxx"    
